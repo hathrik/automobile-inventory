@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+var select,output;
+function checkCapital()
+{
+select=document.getElementById('country');
+//output=select.options[select.selectedIndex].value;
+//alert(output);
+if(select.options[select.selectedIndex].value=="AU")
+{
+document.getElementById("capital").value="canberra";
+//alert("capital is delhi");
+}
+if(select.options[select.selectedIndex].value=="BR")
+{
+document.getElementById("capital").value="Brasilia";
+}
+if(select.options[select.selectedIndex].value=="CA")
+{
+document.getElementById("capital").value="ottawa";
+}
+if(select.options[select.selectedIndex].value=="EG")
+{
+document.getElementById("capital").value="cairo";
+}
+if(select.options[select.selectedIndex].value=="DE")
+{
+document.getElementById("capital").value="berlin";
+}
+if(select.options[select.selectedIndex].value=="IN")
+{
+document.getElementById("capital").value="New Delhi";
+}
+}
+</script>
+</head>
+<body>
+<form>
+<select name="country" id="country" onChange="checkCapital(this.value)">
+<option value="">Country...</option>
+<option value="AU">Australia</option>
+<option value="BR">Brazil</option>
+<option value="CA">Canada</option>
+<option value="EG">Egypt</option>
+<option value="DE">Germany</option>
+<option value="IN">India</option>
+</select>
+<input style="color:red;font-style:italic;" type="text" name="capital" id="capital">
+</form>
+</body>
+</html>
